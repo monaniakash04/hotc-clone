@@ -2,26 +2,152 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.dancing-script-400 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Keep video behind content */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the area */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Keep content above video */
+  color: white; /* Change text color as needed */
+  text-align: center;
+  padding: 20px;
+}
+@font-face {
+  font-family: "Cindie";
+  src: url("./fonts/CindieMono-D.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+.font {
+  font-family: "Cindie", sans-serif;
+}
+.glass {
+  background-color: transparent;
+}
+.img-div {
+  background: url("https://static.tnn.in/thumb/msid-110802436,thumbsize-837715,width-1280,height-720,resizemode-75/110802436.jpg?quality=100");
+  background-size: cover;
+  /* object-fit: cover; */
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.bg {
+  background: url("https://i.ytimg.com/vi/CLNLyZS8wS8/maxresdefault.jpg")
+    no-repeat center top;
+  background-size: cover;
+}
+
+.wedimg {
+  background: url("../media/all/rajkumar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.filmsimg {
+  background: url(../media/kiara-sidharth/kssixth.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contactusimg {
+  background: url(../media/kiara-sidharth/kssixth.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2rem;
+  color: #333; /* Text color */
+  font-weight: 400;
+  animation: scroll 25s linear infinite;
+}
+.scrolling-text2 {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2rem;
+  color: #333; /* Text color */
+  font-weight: 400;
+  animation: scroll2 15s linear infinite;
+}
+.scrolling-text3 {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2rem;
+  color: #333; /* Text color */
+  font-weight: 400;
+  animation: scroll3 10s linear infinite;
+}
+
+/* Keyframe for scrolling effect */
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll3 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Text Content */
+.names {
+  display: inline-block;
+  padding-right: 100vw; /* Create space for looping */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.backimg {
+  background: url("https://media.giphy.com/media/psmk2jPQD9SehTG3bE/giphy.gif?cid=790b7611ftwinblqbb2578so9ikycysx0fcp6354re4n8hv4&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.backimg2 {
+  background: url("https://media.giphy.com/media/c6X20EngjJHDiQ8KaF/giphy.gif?cid=ecf05e47870gfoceznbkirh9h2kxdgsze15vhbyfud0b7ttm&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.backimg3 {
+  background: url("https://media.giphy.com/media/VzCggmNE7lFrmVeHEG/giphy.gif?cid=790b76114w5f1gpg8fzrsj71ektvhx1nf8ykxdxbfc8wbps5&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.backimg4 {
+  background: url("https://media0.giphy.com/media/8oVHO8M0Ur97PjK72G/giphy.gif?cid=6c09b952hjnjjnx3m2g4ekbya13esem96rnm2rcmknq99z4x&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
